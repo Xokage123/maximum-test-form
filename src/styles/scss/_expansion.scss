@@ -1,0 +1,23 @@
+@import './variables';
+
+%effect-text {
+  &:hover {
+    color: $BlueNormal;
+  }
+
+  &:active {
+    color: $BlueDark;
+  }
+}
+
+%effect-input {
+
+  &:hover,
+  &:focus {
+    border: 1px solid $BlueNormal;
+  }
+
+  &:active {
+    border: 1px solid $BlueDark;
+  }
+}
