@@ -134,11 +134,17 @@ export default defineComponent({
     const submitForm = () => {
       api_submitForm()
         .then((res) => {
-          $router.push({
-            name: "SuccessPage",
-          });
+          if (res.success) {
+            $router.push({
+              name: "SuccessPage",
+            });
+          } else {
+            $router.push({
+              name: "UnsuccessPage",
+            });
+          }
         })
-        .catch((er) => {
+        .catch(() => {
           $router.push({
             name: "UnsuccessPage",
           });

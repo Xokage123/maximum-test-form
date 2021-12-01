@@ -13,7 +13,9 @@ export const api_getCity = async (): Promise<Array<ICityInformation>> => {
   return answer.data;
 };
 
-export const api_submitForm = async (): Promise<any> => {
+export const api_submitForm = async (): Promise<{
+  success: boolean;
+}> => {
   try {
     const answer = await axios({
       method: "post",
